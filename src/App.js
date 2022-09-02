@@ -1,10 +1,10 @@
-import Header from './Components/NavBar'
-import Fondo from './Components/Fondo'
+import NavBar from './Components/NavBar'
+import ItemListContainer from './Components/ItemListContainer';
 function App() {
   return (
     <>
-    <Header/>
-    <Fondo/>
+    <NavBar/>
+    <ItemListContainer/>
     </> 
   );
 }

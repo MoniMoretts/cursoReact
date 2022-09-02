@@ -1,7 +1,7 @@
 import React from "react";
 import logo from '../Assets/logo.png';
-import cart from '../Assets/cart.png';
-const Header = () => {
+import CartWidget from './CartWidget'
+const NavBar = () => {
     return (
         <header style={styles.container}>
             <div style={styles.marca}>
@@ -13,7 +13,7 @@ const Header = () => {
                 <a style={styles.links} href="">Vuelos</a>
                 <a style={styles.links} href="">Productos</a>
             </nav>
-            <img style={styles.cart} src={cart} alt="cart" />
+            <CartWidget />
         </header>
     );
 }
@@ -23,7 +23,7 @@ const styles = {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: '#ededed'
+        backgroundColor: '#ededed',
     },
     marca: {
         display: 'flex',
@@ -32,10 +32,6 @@ const styles = {
     logo: {
         width: '7%',
         paddingLeft: '30px',
-    },
-    cart: {
-        width: '3%',
-        paddingRight: '30px',
     },
     links: {
         paddingLeft: '20px',
@@ -47,6 +43,7 @@ const styles = {
         color: '#ba2974',
         paddingLeft: '30px',
         fontStyle: 'italic',
+        fontWeight: '400',
     },
 }
-export default Header
+export default NavBar
