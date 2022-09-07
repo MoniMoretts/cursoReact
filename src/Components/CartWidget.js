@@ -25,7 +25,7 @@ const styles = {
     span:{
         width: '40%',
         fontSize: '25px',
-        fontWeight: '200'
+        fontWeight: '300'
     }
 }
 export default CartWidget

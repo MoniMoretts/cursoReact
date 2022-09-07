@@ -35,7 +35,7 @@ const styles = {
     },
     links: {
         paddingLeft: '20px',
-        color: '#6a6b6b',
+        color: '#242424',
         fontSize: '20px',
         textDecoration: 'none'
     },
