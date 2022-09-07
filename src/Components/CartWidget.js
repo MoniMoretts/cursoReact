@@ -1,7 +1,13 @@
 import cart from '../Assets/cart.png';
+
 const CartWidget = () => {
+
+
     return (
-        <img style={styles.cart} src={cart} alt="cart" />
+        <>
+            <img style={styles.cart} src={cart} alt="cart" />
+        </>
+
     )
 
 }
