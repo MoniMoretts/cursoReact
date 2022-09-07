@@ -1,7 +1,7 @@
 import React from "react";
 import logo from '../Assets/logo.png';
 import CartWidget from './CartWidget'
-const NavBar = () => {
+const NavBar = ({ labelCart }) => {
     return (
         <header style={styles.container}>
             <div style={styles.marca}>
@@ -13,7 +13,7 @@ const NavBar = () => {
                 <a style={styles.links} href="">Vuelos</a>
                 <a style={styles.links} href="">Productos</a>
             </nav>
-            <CartWidget />
+            <CartWidget numCart={labelCart} />
         </header>
     );
 }

@@ -1,33 +1,17 @@
 import menos from '../Assets/menos.png';
 import mas from '../Assets/mas.png';
-import React, { useState } from 'react';
 
-const ItemListContainer = ({ stock }) => {
-    const [contador, setContador] = useState(1);
-    const [cartel, setCartel] = useState(``);
-    const sumar = () => {
-        if (contador < stock) {
-            setContador(contador + 1)
-        }
-    }
-    const restar = () => {
-        if (contador > 1) {
-            setContador(contador - 1)
-        }
-    }
-    const agregar = () => {
-        setCartel(`Su carrito posee ${contador} productos`)
-    }
-
+const ItemListContainer = ({ resta , suma , add , fra , cont }) => {
+    
     return (
         <div style={styles.div}>
             <div style={styles.contador}>
-                <img style={styles.botones} src={menos} alt="menos" onClick={restar} />
-                <span style={styles.span}>{contador}</span>
-                <img style={styles.botones} src={mas} alt="mas" onClick={sumar} />
+                <img style={styles.botones} src={menos} alt="menos" onClick={resta} />
+                <span style={styles.span}>{cont}</span>
+                <img style={styles.botones} src={mas} alt="mas" onClick={suma} />
             </div>
-            <button style={styles.boton} onClick={agregar} >Agregar al carrito</button>
-            <p style={styles.frase}>{cartel}</p>
+            <button style={styles.boton} onClick={add} >Agregar al carrito</button>
+            <p style={styles.frase}>{fra}</p>
         </div>
     )
 }
@@ -61,7 +45,7 @@ const styles = {
     boton: {
         color: '#6a6b6b',
         borderColor: '#ba2974',
-        backgroundColor:'white',
+        backgroundColor: 'white',
         fontSize: '25px',
         fontWeight: '300',
     },
@@ -74,3 +58,4 @@ const styles = {
     }
 }
 export default ItemListContainer
+
