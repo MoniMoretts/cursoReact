@@ -1,11 +1,10 @@
 import cart from '../Assets/cart.png';
-const CartWidget = ({numCart}) => {
+const CartWidget = () => {
 
 
     return (
         <div style={styles.div}>
             <img style={styles.cart} src={cart} alt="cart" />  
-            <span style={styles.span}>{numCart}</span> 
         </div>
 
     )
@@ -22,10 +21,5 @@ const styles = {
     cart: {
         width: '40%',
     },
-    span:{
-        width: '40%',
-        fontSize: '25px',
-        fontWeight: '300'
-    }
 }
 export default CartWidget

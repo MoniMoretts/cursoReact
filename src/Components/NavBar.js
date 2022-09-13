@@ -13,7 +13,7 @@ const NavBar = ({ labelCart }) => {
                 <a style={styles.links} href="">Vuelos</a>
                 <a style={styles.links} href="">Productos</a>
             </nav>
-            <CartWidget numCart={labelCart} />
+            <CartWidget />
         </header>
     );
 }
