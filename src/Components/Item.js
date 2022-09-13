@@ -5,9 +5,11 @@ import mas from '../Assets/mas.png'
 const Item = ({ info }) => {
 
     const [contador, setContador] = useState(1);
+    const [cartel, setCartel] = useState(``);
                 
 
     return (
+        <>
         <div style={styles.div}>
             {info.map((boleto) => {
                 const sumar = () => {
@@ -20,6 +22,10 @@ const Item = ({ info }) => {
                         setContador(contador - 1)
                     }
                 }
+                const agregar = () => {
+                    setCartel(`Su carrito posee ${contador} productos`)
+                }
+
                 return (
                     <div style={styles.items}>
                         <h2>{boleto.name}</h2>
@@ -30,15 +36,25 @@ const Item = ({ info }) => {
                             <span style={styles.span}>{contador}</span>
                             <img style={styles.botones} src={mas} alt="mas" onClick={sumar} />
                         </div>
+                        <button style={styles.boton} onClick={agregar} >Agregar al carrito</button>
+                        <p style={styles.frase}>{cartel}</p>
                     </div>
                 )
             })}
-
         </div>
+        </>
     )
 }
 
 const styles = {
+    boton: {
+        color: '#242424',
+        borderColor: '#ba2974',
+        borderStyle: 'solid',
+        backgroundColor: '#ba297400',
+        fontSize: '25px',
+        fontWeight: '300',
+    },
     contador: {
         display: 'flex',
         justifyContent: 'space-evenly',
@@ -48,7 +64,7 @@ const styles = {
         alignItems: 'center'
     },
     boletos: {
-        width: '30%'
+        width: '100%'
     },
     botones: {
         width: '20%',
@@ -72,7 +88,10 @@ const styles = {
         flexDirection: 'column',
         alignItems: 'center',
         paddingTop: '10px',
-        paddingBottom: '30px',
+        paddingBottom: '0px',
+        backgroundColor: '#ededed',
+        margin: '40px',
+        borderRadius: '10px'
     },
     div: {
         display: 'flex',
