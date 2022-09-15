@@ -1,29 +1,23 @@
+import React from "react"
 import Item from "./Item"
-import React, { useState, useEffect } from "react"
 
 const ItemList = ({ destinos }) => {
+    
+return(
+    <div style={styles.div} >
+    {destinos.map((destino)=>{
+        return(<Item destino={destino} key={destino.id} />)
+    })}
+    </div>
+)
+}
 
-    const promesa = new Promise((res, rej) => {
-        res(destinos)
-        rej("algo anda mal")
-    })
-
-    const [boletos, setBoletos] = useState([])
-
-    useEffect(() => {
-        setTimeout(() => {
-            console.log(promesa);
-            promesa
-                .then((data) => {
-                    console.log("funcionamiento óptimo");
-                    setBoletos(data)
-                })
-        },2000)
-    })
-
-    return (
-        <Item info={boletos}/>
-    )
+const styles = {
+    div: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-evenly'
+    }
 }
 
 export default ItemList 
