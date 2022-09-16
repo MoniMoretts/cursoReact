@@ -40,7 +40,7 @@ const ItemListContainer = () => {
 
 const styles={
     h2:{
-        color: 'black',
+        color: '#242424',
         fontWeight: '400',
         fontSize: '30px',
         width: '100%',

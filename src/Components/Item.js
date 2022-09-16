@@ -3,7 +3,7 @@ const Item = ({ destino }) => {
 
     return (
         <div style={styles.div}>
-            <h2>{destino.name}</h2>
+            <h2 style={styles.h2}>{destino.name}</h2>
             <img src={destino.img} alt={destino.name} style={styles.img} />
             <p style={styles.p}>Ida y vuelta usd{destino.price}</p>
             <ItemCount stock={destino.stock} nombre={destino.name} initial={1} />
@@ -17,15 +17,19 @@ const styles = {
         flexDirection: 'column',
         alignItems: 'center',
         width: '30%',
-        backgroundColor: '#ededed',
+        backgroundColor: '#811c50',
         margin: '40px',
         borderRadius: '10px'
     },
     img: {
         width: '100%'
     },
+    h2:{
+        color: 'white',
+        fontWeight: '400',
+    },
     p: {
-        color: '#242424',
+        color: 'white',
         fontSize: '20px',
         fontWeight: '300',
         textAlign: 'center',

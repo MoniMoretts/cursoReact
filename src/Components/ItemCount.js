@@ -37,10 +37,8 @@ const styles={
         height: '80%'
     },
     span: {
-        color: '#242424',
+        color: 'white',
         fontSize: '30px',
-        borderColor: '#ba2974',
-        borderStyle: 'solid',
         fontWeight: '400',
         width: '30%',
         textAlign: 'center',

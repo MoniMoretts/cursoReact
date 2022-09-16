@@ -16,7 +16,10 @@ const styles = {
     div: {
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-evenly'
+        justifyContent: 'space-evenly',
+        marginLeft: '40px',
+        marginRight: '40px',
+        borderRadius: '10px'
     }
 }
 

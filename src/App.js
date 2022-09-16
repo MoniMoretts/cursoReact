@@ -14,7 +14,9 @@ const styles = {
   div:{
     backgroundImage:`url(${fondo})`,
     backgroundPosition: 'center',
-    backgroundSize: 'cover'
+    backgroundSize: 'cover',
+    height: '100%',
+    margin: '0px'
   }
 }
 export default App;
