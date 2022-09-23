@@ -1,16 +1,16 @@
-import ItemCount from "./ItemCount"
-const Item = ({ destino }) => {
+import { Link } from "react-router-dom"
+
+
+const Item = ({ producto }) => {
 
     return (
-        <div style={styles.div}>
-            <h2 style={styles.h2}>{destino.name}</h2>
-            <img src={destino.img} alt={destino.name} style={styles.img} />
-            <p style={styles.p}>Ida y vuelta usd{destino.price}</p>
-            <ItemCount stock={destino.stock} nombre={destino.name} initial={1} />
-        </div>
+        <Link style={styles.div} key={producto.id} to={`producto/${producto.id}`} >
+            <img style={styles.img} alt={producto.title} src={producto.image}/>
+            <h2 style={styles.h2}>{producto.title}</h2>
+        </Link>
     )
 }
-
+//<ItemCount stock={destino.stock} nombre={destino.model} initial={1} />
 const styles = {
     div:{
         display: 'flex',
@@ -22,7 +22,7 @@ const styles = {
         borderRadius: '10px'
     },
     img: {
-        width: '100%'
+        width: '50%'
     },
     h2:{
         color: 'white',

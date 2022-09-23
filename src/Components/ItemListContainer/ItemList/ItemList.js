@@ -1,15 +1,15 @@
 import React from "react"
-import Item from "./Item"
+import Item from "./Item/Item"
 
-const ItemList = ({ destinos }) => {
-    
-return(
-    <div style={styles.div} >
-    {destinos.map((destino)=>{
-        return(<Item destino={destino} key={destino.id} />)
-    })}
-    </div>
-)
+const ItemList = ({ productos }) => {
+
+    return (
+        <div style={styles.div} >
+            {productos.map((producto) => {
+                return (<Item producto={producto} key={producto.id} />)
+            })}
+        </div>
+    )
 }
 
 const styles = {
