@@ -1,17 +1,16 @@
 import React from "react"
 
 const ItemDetail = ({ producto }) => {
-    
+
     return (
         <div style={styles.div} >
-            {producto.map((product) => {
-                return (
-                    <div key={product.id}>
-                        <img style={styles.img} alt={product.title} src={product.image} />
-                        <h2 style={styles.h2}>{product.title}</h2>
-                    </div>
-                )
-            })}
+            <img style={styles.img} alt={producto.title} src={producto.image} />
+            <div style={styles.content}>
+                <h2 style={styles.h2}>{producto.title}</h2>
+                <h2 style={styles.h2}>{producto.price}usd</h2>
+                <h3 style={styles.h2}>{producto.category}</h3>
+                <h4 style={styles.h2}>{producto.description}</h4>
+            </div>
         </div>
     )
 }
@@ -19,15 +18,18 @@ const ItemDetail = ({ producto }) => {
 const styles = {
     div: {
         display: 'flex',
-        flexDirection: 'column',
         alignItems: 'center',
-        width: '30%',
+        width: '70%',
         backgroundColor: '#811c50',
         margin: '40px',
         borderRadius: '10px'
     },
+    content:{
+        width: '60%',
+        paddingLeft: '20px'
+    },
     img: {
-        width: '50%'
+        width: '30%'
     },
     h2: {
         color: 'white',

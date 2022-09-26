@@ -14,20 +14,13 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         fetch(`${URL_PRODUCT}${IdProducto}`)
             .then((response) => response.json())
-            .then((data) => {
-                const lista = data.map((product) => {
-                    return { ...product }
-                })
-                setProductos(lista)
-            })
+            .then((info) => {setProductos(info)})
             .catch(err => console.error('error:' + err));
     }, [IdProducto])
 
     return (
         <div>
-            {productos.map((producto) => {
-                return (<ItemDetail producto={producto} key={producto.id} />)
-            })}
+            <ItemDetail producto={productos} />
         </div>
     )
 }
