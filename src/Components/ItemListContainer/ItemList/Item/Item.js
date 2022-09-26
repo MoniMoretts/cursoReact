@@ -17,16 +17,19 @@ const styles = {
         flexDirection: 'column',
         alignItems: 'center',
         width: '30%',
-        backgroundColor: '#811c50',
+        backgroundColor: '#ededed',
         margin: '40px',
-        borderRadius: '10px'
+        borderRadius: '10px',
+        boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.603)'
     },
     img: {
         width: '50%'
     },
     h2:{
-        color: 'white',
+        color: 'black',
         fontWeight: '400',
+        textAlign: 'center',
+        textDecoration: 'none',
     },
     p: {
         color: 'white',

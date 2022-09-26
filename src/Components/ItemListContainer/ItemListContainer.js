@@ -25,7 +25,7 @@ const ItemListContainer = () => {
 
     return (
         <>
-            <h2 style={styles.h2}>Seleccion la cantidad de boletos que desea comprar</h2>
+            <h2 style={styles.h2}>Lo mejor para vos y para tu bolsillo</h2>
             <ItemList productos={productos} />
         </>
     )
@@ -33,13 +33,14 @@ const ItemListContainer = () => {
 
 const styles = {
     h2: {
-        color: '#242424',
-        fontWeight: '400',
+        color: 'white',
+        fontWeight: '300',
         fontSize: '30px',
         width: '100%',
         textAlign: 'center',
         marginBottom: '50px',
-        marginTop: '50px'
+        marginTop: '50px',
+        fontStyle: 'italic',
     },
 }
 

@@ -21,7 +21,7 @@ function App() {
 }
 const styles = {
   div: {
-    backgroundColor: 'black',
+    backgroundColor: '#811c50',
   }
 }
 export default App;

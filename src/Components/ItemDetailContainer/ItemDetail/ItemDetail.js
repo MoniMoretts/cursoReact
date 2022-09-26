@@ -1,4 +1,5 @@
 import React from "react"
+import ItemCount from "../../ItemCount"
 
 const ItemDetail = ({ producto }) => {
 
@@ -8,8 +9,8 @@ const ItemDetail = ({ producto }) => {
             <div style={styles.content}>
                 <h2 style={styles.h2}>{producto.title}</h2>
                 <h2 style={styles.h2}>{producto.price}usd</h2>
-                <h3 style={styles.h2}>{producto.category}</h3>
                 <h4 style={styles.h2}>{producto.description}</h4>
+                <ItemCount stock={10} nombre={producto.title} initial={1} />
             </div>
         </div>
     )
@@ -22,14 +23,15 @@ const styles = {
         width: '70%',
         backgroundColor: '#811c50',
         margin: '40px',
-        borderRadius: '10px'
+        borderRadius: '10px',
     },
     content:{
         width: '60%',
         paddingLeft: '20px'
     },
     img: {
-        width: '30%'
+        width: '30%',
+        borderRadius: '15px'
     },
     h2: {
         color: 'white',
