@@ -25,7 +25,7 @@ const ItemListContainer = () => {
 
     return (
         <>
-            <h2 style={styles.h2}>Lo mejor para vos y para tu bolsillo</h2>
+            <h2 style={styles.h2}>¡Lo mejor para vos y para tu bolsillo!</h2>
             <ItemList productos={productos} />
         </>
     )
