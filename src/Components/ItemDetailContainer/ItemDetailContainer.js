@@ -19,10 +19,17 @@ const ItemDetailContainer = () => {
     }, [IdProducto])
 
     return (
-        <div>
+        <div style={styles.div}>
             <ItemDetail producto={productos} />
         </div>
     )
+}
+const styles = {
+    div:{
+        height:'80vh',
+        display: 'flex',
+        justifyContent: 'center'
+    }
 }
 
 

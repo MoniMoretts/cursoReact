@@ -18,6 +18,7 @@ const styles = {
     div: {
         display: 'flex',
         alignItems: 'center',
+        flexWrap:'wrap',
         justifyContent: 'space-evenly',
         marginLeft: '40px',
         marginRight: '40px',

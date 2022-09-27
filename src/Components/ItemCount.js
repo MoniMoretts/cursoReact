@@ -33,7 +33,7 @@ const styles={
         alignItems: 'center'
     },
     botones: {
-        width: '20%',
+        width: '15%',
         height: '80%'
     },
     span: {
@@ -42,8 +42,8 @@ const styles={
         fontWeight: '400',
         width: '30%',
         textAlign: 'center',
-        marginRight: '20px',
-        marginLeft: '20px'
+        marginRight: '0px',
+        marginLeft: '0px'
     },
 }
 

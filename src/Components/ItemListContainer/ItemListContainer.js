@@ -12,7 +12,7 @@ const ItemListContainer = () => {
     const URL_BASE = 'https://fakestoreapi.com/products?sort=desc'
 
     useEffect(() => {
-        fetch(IdCategoria ? `${URL_CATEGORY}${IdCategoria}?limit=3`:`${URL_BASE}`)
+        fetch(IdCategoria ? `${URL_CATEGORY}${IdCategoria}`:`${URL_BASE}`)
             .then((response) => response.json())
             .then((data) => {
                 const lista = data.map((product) => {

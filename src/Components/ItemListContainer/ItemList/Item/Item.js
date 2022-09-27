@@ -15,21 +15,27 @@ const styles = {
     div:{
         display: 'flex',
         flexDirection: 'column',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
-        width: '30%',
+        width: '250px',
+        height: '450px',
         backgroundColor: '#ededed',
-        margin: '40px',
-        borderRadius: '10px',
-        boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.603)'
+        margin: '20px',
+        boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.603)',
+        textDecoration: 'none',
     },
     img: {
-        width: '50%'
+        height: 'auto',
+        width: 'auto',
+        maxWidth: '250px',
+        maxHeight: '225px'
     },
     h2:{
         color: 'black',
         fontWeight: '400',
         textAlign: 'center',
         textDecoration: 'none',
+        fontSize: '18px',
     },
     p: {
         color: 'white',

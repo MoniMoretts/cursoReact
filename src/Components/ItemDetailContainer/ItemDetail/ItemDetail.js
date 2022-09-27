@@ -2,14 +2,13 @@ import React from "react"
 import ItemCount from "../../ItemCount"
 
 const ItemDetail = ({ producto }) => {
-
     return (
         <div style={styles.div} >
             <img style={styles.img} alt={producto.title} src={producto.image} />
             <div style={styles.content}>
                 <h2 style={styles.h2}>{producto.title}</h2>
-                <h2 style={styles.h2}>{producto.price}usd</h2>
-                <h4 style={styles.h2}>{producto.description}</h4>
+                <h3 style={styles.h3}>{producto.price}usd</h3>
+                <h4 style={styles.h4}>{producto.description}</h4>
                 <ItemCount stock={10} nombre={producto.title} initial={1} />
             </div>
         </div>
@@ -27,7 +26,10 @@ const styles = {
     },
     content:{
         width: '60%',
-        paddingLeft: '20px'
+        paddingLeft: '20px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-evenly'
     },
     img: {
         width: '30%',
@@ -37,12 +39,16 @@ const styles = {
         color: 'white',
         fontWeight: '400',
     },
-    p: {
+    h3: {
         color: 'white',
-        fontSize: '20px',
-        fontWeight: '300',
-        textAlign: 'center',
-    }
+        fontWeight: '400',
+        fontSize: '25px'
+    },
+    h4: {
+        color: 'white',
+        fontWeight: '400',
+        marginBottom: '40px'
+    },
 }
 
 export default ItemDetail
