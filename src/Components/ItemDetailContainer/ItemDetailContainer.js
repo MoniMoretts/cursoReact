@@ -1,4 +1,4 @@
-import ItemDetail from "./ItemDetail/ItemDetail"
+import {ItemDetail} from "./ItemDetail/ItemDetail"
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
 }
 const styles = {
     div:{
-        height:'80vh',
+        height:'100%',
         display: 'flex',
         justifyContent: 'center'
     }
