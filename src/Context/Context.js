@@ -18,7 +18,7 @@ const CustomProvider = ({ children }) => {
 
   const agregar = (producto, cantidad) => {
     if (estaEnLista(producto.id)) {
-        
+        alert('este producto ya se encuentra en el carrito')
     } else {
       setCart([...cart, { producto, cantidad }]);
     }
