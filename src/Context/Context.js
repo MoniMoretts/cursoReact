@@ -6,29 +6,48 @@ export const Context = createContext();
 const CustomProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [cantidad, setCantidad] = useState(0);
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    let cantidad = 0;
+    let qtyProduct = 0
     cart.forEach((producto)=>
-      cantidad = cantidad + producto.qty
+    qtyProduct = qtyProduct + producto.cantidad
     )
-    setCantidad(cantidad);
+    setCantidad(qtyProduct);
   }, [cart])
   
 
-  const agregar = (producto, cantidad) => {
+  const agregar = (producto, qtyProduct) => {
     if (estaEnLista(producto.id)) {
-        alert('este producto ya se encuentra en el carrito')
-    } else {
-      setCart([...cart, { producto, cantidad }]);
+      setCart(
+        cart.map((item) => {
+          if (item.producto.id === producto.id) {
+            return {
+              producto: item.producto,
+              qtyProduct: item.qtyProduct + qtyProduct,
+            };
+          }
+          return item;
+        })
+       )
+       } else {
+      setCart([...cart, { producto, qtyProduct }]);
     }
+    setCantidad(cantidad + qtyProduct);
+    setTotal(total + ( qtyProduct * producto.price ));
   };
 
   const borrar = (id) => {
-    const arrayFiltrado = cart.filter((producto) => {
-      return producto.id !== id;
-    });
-    setCart(arrayFiltrado);
+    const productCart = cart.find((item)=>item.producto.id === id)
+    console.log(id)
+    console.log(productCart)
+    setCart(
+      cart.filter((item) => {
+        return item.producto.id !== id;
+      })
+    );
+    setCantidad(cantidad - productCart.qtyProduct);
+    setTotal(total - ( productCart.qtyProduct * productCart.producto.price));
   };
 
   const estaEnLista = (id) => cart.some((producto) => producto.id === id);
@@ -43,6 +62,7 @@ const CustomProvider = ({ children }) => {
       value={{
         cantidad,
         cart,
+        total,
         agregar,
         borrar,
         reset,
